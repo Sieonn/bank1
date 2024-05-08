@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+.accValue {
+  display: inline-block;
+  width: 230px;
+  height: 25px;
+}
