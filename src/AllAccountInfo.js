@@ -1,5 +1,9 @@
 import {useState, useEffect} from "react";
 import axios from "axios";
+import { Table } from 'reactstrap';
+
+
+
 export default function AllAccountInfo() {
     const [accs, setAccs] = useState([])
     const [account, setAccount] = useState({id:'', name:'', balance:'',type:'', grade:''})
@@ -21,9 +25,9 @@ export default function AllAccountInfo() {
     },[]) //[]를 같이써주면 한번만 실행하라는것, 안써주면 계속 업데이트 한다고 돌아감.
 
     return (
-        <>
+        <div className="route">
             <h3>전체계좌 조회</h3>
-            <table border="1">
+            <Table hover style={{width: '800px', margin:'0 auto'}}>
                 <tbody>
                     <tr>
                         <th>계좌번호</th>
@@ -32,7 +36,6 @@ export default function AllAccountInfo() {
                         <th>종류</th>
                         <th>등급</th>
                     </tr>
-                    {/* Map through the accs array and render table rows */}
                     {accs.map(account => (
                         <tr key={account.id}>
                             <td>{account.id}</td>
@@ -43,7 +46,7 @@ export default function AllAccountInfo() {
                         </tr>
                     ))}
                 </tbody>
-            </table>
-        </>
+            </Table>
+        </div>
     )
 }

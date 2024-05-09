@@ -6,6 +6,44 @@
   height: 40vmin;
   pointer-events: none;
 }
+/* } .accValue */
+.accValue {
+   display: inline-block;
+   width: 220px;
+   height: 25px;
+}
+
+.nav-items {
+  list-style: none;
+  margin: 0 auto;
+}
+
+.nav-item {
+  display: inline-block;
+  height : 80px;
+  padding: 0 10px;
+  text-align: center;
+  min-width:  80px;
+  margin: 0 10px;
+  line-height: 80px;
+}
+
+.route {
+  margin-top: 50px;
+  text-align:  center;
+}
+
+a {
+  text-decoration:  none;
+}
+
+form{
+  margin : 30px auto;
+  padding: 20px;
+  width : 400px;
+  border : 1px solid lightgray;
+  border-radius: 10px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -36,8 +74,10 @@
     transform: rotate(360deg);
   }
 }
-.accValue {
+.label{
   display: inline-block;
-  width: 230px;
-  height: 25px;
+  width: 100px;
+}
+.label-text{
+  text-align: center;
 }
